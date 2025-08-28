@@ -96,7 +96,6 @@
     "which": "^2.0.2",
     "wrap-ansi": "^8.1.0",
     "wrap-ansi-cjs": "^7.0.0",
-    "yaml": "^2.8.1",
     "tailwindcss": "^3.4.1",
     "postcss": "^8.4.23",
     "autoprefixer": "^10.4.14"
