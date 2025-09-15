@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 
 <head>
 	<meta charset="UTF-8">
@@ -16,16 +14,19 @@
 	<title>CENTRO EDUCATIVO LA JARDINERA</title>
 	<meta property="og:title" content="Sitio web de un centro educativo">
 	<meta property="og:description" content="Sitio web del centro educativo La Jardinera">
-	<link rel="stylesheet" type="text/css" href="la_Jardinera.css">
+	<link rel="stylesheet" href="la_Jardinera.css">
 	<link rel="icon" href="imagenes/icono2.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+	<link href="dist/output.css" rel="stylesheet">
+	<!-- Font Awesome (versión 6 estable con compatibilidad) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<center>
+<body class="bg-gray-50">
 	<header>
-		<nav class="bg-white border-gray-200">
-			<div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
+		<nav class="bg-white border-gray-200 shadow-sm">
+			<div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-5">
 				<button data-collapse-toggle="navbar-dropdown" type="button"
 					class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
 					aria-controls="navbar-dropdown" aria-expanded="false">
@@ -38,15 +39,15 @@
 				</button>
 				<div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
 					<ul
-						class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+						class="flex flex-col font-bold p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
 						<li>
 							<a href="/index.html"
-								class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0"
+								class="block py-2 px-3 text-white bg-gray-500 rounded md:bg-transparent md:text-[#FFD700] md:p-0"
 								aria-current="page">INICIO</a>
 						</li>
 						<li>
 							<button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-								class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">NUESTRA
+								class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FFD700] md:p-0 md:w-auto">NUESTRA
 								INSTITUCION
 								<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
 									fill="none" viewBox="0 0 10 6">
@@ -56,20 +57,20 @@
 							</button>
 							<!-- Dropdown menu -->
 							<div id="dropdownNavbar"
-								class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+								class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
 								<ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
 									<li><a href="/nuestra_institucion.html"
-											class="block px-4 py-2 hover:bg-gray-100">HORIZONTE INSTITUCIONAL</a></li>
+											class="block px-4 py-2 hover:bg-gray-100">HORIZONTE
+											INSTITUCIONAL</a></li>
 									<li><a href="/simbolosInstitucionales.html"
-											class="block px-4 py-2 hover:bg-gray-100">SIMBOLOS INSTITUCIONALES</a></li>
+											class="block px-4 py-2 hover:bg-gray-100">SIMBOLOS
+											INSTITUCIONALES</a></li>
 								</ul>
 							</div>
 						</li>
-						<li><a href="/index_ubicacion.html"
-								class="block py-2 px-3 text-gray-900 rounded-sm md:hover:text-blue-700 md:p-0">VISITANOS</a>
-						</li>
-						<li><a href="https://www.youtube.com/watch?v=Fxo72EOoRzM"
-								class="block py-2 px-3 text-gray-900 rounded-sm md:hover:text-blue-700 md:p-0">ACERCA
+						<li><a href="https://www.youtube.com/watch?v=Fxo72EOoRzM" target="_blank"
+								rel="noopener noreferrer"
+								class="block py-2 px-3 text-gray-900 rounded md:hover:text-[#FFD700] md:p-0">ACERCA
 								DE</a></li>
 					</ul>
 				</div>
@@ -77,191 +78,301 @@
 		</nav>
 	</header>
 
-	<body>
-		</center>
-		<br><br>
-		<div class="institutional_Sybols">
-			<div class="title_insymbols">
-				<h1>
-					SIMBOLOS INSTITUCIONALES
+	<div class="contenedor-principal">
+		<main class="max-w-5xl mx-auto">
+			<!-- Encabezado -->
+			<div class="bg-custom-gradient text-[#190404] text-center py-12 rounded-xl shadow-lg mb-8">
+				<h1 class="text-4xl md:text-5xl font-extrabold mb-4" style="font-family: 'Playfair Display', serif;">
+					SÍMBOLOS INSTITUCIONALES
 				</h1>
-				<div>
-					<h2>
-						LA BANDERA
-					</h2>
-					<p>
-						La Institución Educativa Instituto Teresiano Sede <b>La Jardinera</b>; se compone de
-						los colores blanco y café, distribuidos en dos franjas horizontales de igual ancho.
-						El blanco; colocado en la parte superior; simboliza a la Santísima Virgen del Carmen;
-						y el café en la parte inferior; simboliza el Monte Carmelo. En el centro de la bandera
-						se exhibe el escudo Carmelitano de la Institución.
+				<div class="w-24 h-1.5 bg-yellow-400 rounded-full mx-auto my-4"></div>
+				<p class="text-xl">Conoce los elementos que representan la identidad y valores de nuestra institución
+					educativa</p>
+			</div>
+
+			<section
+				class="bg-white rounded-xl shadow-md p-6 md:p-8 mb-8 transition-all duration-300 hover:shadow-lg border-l-4 border-yellow-400">
+				<h2 class="text-2xl md:text-3xl font-bold mb-6 decoracion-subtitulo"
+					style="font-family: 'Playfair Display', serif; color: #190404;">
+					<span class="icono-seccion mr-2">
+						<i class="fas fa-flag" style="color: #eab308;"></i>
+					</span>
+					LA BANDERA
+				</h2>
+				<p class="text-justify leading-relaxed">
+					La bandera de la Institución Educativa Instituto Teresiano Sede <span class="font-bold"
+						style="color: #190404;">La Jardinera</span> se compone de
+					los colores blanco y café, distribuidos en dos franjas horizontales de igual ancho.
+					El blanco; colocado en la parte superior; simboliza a la Santísima Virgen del Carmen;
+					y el café en la parte inferior; simboliza el Monte Carmelo. En el centro de la bandera
+					se exhibe el escudo Carmelitano de la Institución.
+				</p>
+				<div class="flex justify-center my-6">
+					<img src="imagenes/bandera.jpeg" alt="Bandera La Jardinera" title="Bandera La Jardinera"
+						class="imagen-simbolo max-w-full md:max-w-md">
+				</div>
+			</section>
+
+			<div class="separador-decorativo"></div>
+
+			<section
+				class="bg-white rounded-xl shadow-md p-6 md:p-8 mb-8 transition-all duration-300 hover:shadow-lg border-l-4 border-yellow-400">
+				<h2 class="text-2xl md:text-3xl font-bold mb-6 decoracion-subtitulo"
+					style="font-family: 'Playfair Display', serif; color: #190404;">
+					<span class="icono-seccion mr-2">
+						<i class="fas fa-shield-alt text-amber-800"></i>
+					</span>
+					EL ESCUDO
+				</h2>
+				<p class="text-justify leading-relaxed">
+					El escudo Carmelitano es un emblema verdaderamente bello por su sencillez; célebre
+					por su antigüedad y sagrado significado.
+					Está compuesto de fondo blanco en la parte superior y marrón la inferior; representa
+					el vestido de la Santísima Virgen que llevó en vida y el hábito de los Carmelitas.
+					Así mismo la parte inferior marrón indica el Monte Carmelo donde vivió la Santísima
+					Virgen durante su vida mortal; la cruz fue agregada por San Juan de la Cruz en la
+					época de la reforma representando a nuestro Señor Jesucristo.
+					En el centro de color marrón <strong class="text-amber-800">(Monte Carmelo)</strong>; se
+					encuentra una estrella
+					plateada; que representa la Virgen María.
+					El fondo blanco de la parte superior significa que el profeta Elías contemplando
+					a la Virgen María en una nubecilla blanca; en el mismo fondo que posan dos estrellas;
+					doradas las cuales representan a dos grandes profetas: Elías y Eliseo.
+					En la parte superior del escudo se encuentran doce estrellas las cuales significan
+					la corona de la Virgen María; simbolizan los doce grandes favores y gracias que
+					concedió a su orden y de manera especial; los doce privilegios y gracias singulares
+					con el que el Señor ensalzó a María.
+					De la corona; que se encuentra en la parte superior del escudo; sale brazo que sujeta
+					una espada; se le atribuye al Santo Patriarca Elías; termina en una punta en llama
+					de fuego con esta dio muerte a los falsos profetas de Baal en el torrente de Gisón
+					por la honra de nuestro Señor Dios Padre.
+					A la vuelta de la espada hay una inscripción en latín que dice: <strong class="text-amber-800">ZELO
+						ZELATUS
+						SUM PRO DOMINO DEO EXERCITUUM</strong>; que traduce: <strong class="text-amber-800">me
+						abrazo; me
+						consumo de celo por el Señor Dios de los Ejércitos</strong>.
+				</p>
+				<div class="flex justify-center my-6">
+					<img src="imagenes/escudo.jpeg" alt="Escudo La Jardinera" title="Escudo La Jardinera"
+						class="imagen-simbolo max-w-full md:max-w-md shadow-md">
+				</div>
+			</section>
+
+			<div class="separador-decorativo"></div>
+
+			<section
+				class="bg-white rounded-xl shadow-md p-6 md:p-8 transition-all duration-300 hover:shadow-lg border-l-4 border-yellow-400">
+				<h2 class="text-2xl md:text-3xl font-bold mb-6 decoracion-subtitulo"
+					style="font-family: 'Playfair Display', serif; color: #190404;">
+					<span class="icono-seccion mr-2">
+						<i class="fas fa-music text-blue-700"></i>
+					</span>
+					EL HIMNO
+				</h2>
+				<h3 class="text-xl md:text-2xl font-semibold mb-6 text-center text-blue-700">
+					HIMNO A LA INSTITUCIÓN EDUCATIVA "INSTITUTO TERESIANO SEDE LA JARDINERA"
+				</h3>
+
+				<div class="cita-destacada text-center">
+					<p class="mb-6">
+						Prestigioso e inmortal Teresiano<br>
+						templo augusto de ciencia y virtud<br>
+						do se funden la fe, la esperanza y el amor a los pies de la cruz.
 					</p>
-					<br>
-					<div class="imgflag">
-						<img src="imagenes/bandera.jpeg" alt="Bandera La Jardinera" title="Bandera La Jardinera">
-					</div>
-					<br>
-					<h2>
-						EL ESCUDO
-					</h2>
-					<p>
-						El escudo Carmelitano es un emblema verdaderamente bello por su sencillez; célebre
-						por su antiguedad y sagrado significado.
-						Está compuesto de fondo blanco en la parte superior y marrón la inferior; representa
-						el vestido de la Santísima Virgen que llevó en vida y el hábito de los Carmelitas.
-						Así mismo la parte inferior marrón indica el Monte Carmelo donde vivió la Santísima
-						Virgen durante su vida mortal; la cruz fue agregada por San Juan de la Cruz en la
-						época de la reforma representando a nuestro Señor Jesucristo.
-						En el centro de color marrón <b>(Monte Carmelo)</b>; se encuentra una estrella
-						plateada; que representa la Virgen María.
-						El fondo blanco de la parte superior significa quee el profeta Elías contenplando
-						a la Virgen María en una nubecilla blanca; en el mismo fondo que posan dos estrellas;
-						doradas las cuales representan a dos grandes profetas: Elías y Eliseo.
-						En la parte superior del escudo se encuentran doce estrellas las cuales significan
-						la corana de la Virgen María; simbolizan los doce grandes favores y gracias que
-						concedió a su orden y de manera especial; los doce privilegios y granias singulares
-						con el que el Señor ensalzó a María.
-						De la corona; que se encuentra en la parte superior del escudo; sale brazo que sugeta
-						una espada; se le atribuye al Santo Patriarca Elías; termina en una punta en llama
-						de fuego con esta dio muerte a los falsos profetas de Baal en el torrente de Gisón
-						por la honra de nuestro Señor Dios Padre.
-						A la vuelta de la espada hay una inscripción en latín que dice: <b>ZELO ZELATUS
-							SUM PRO DOMINO DEO EXERCITUUM</b>; que traduce: <b>me abrazo; me
-							consumo de celo por el Señor Dios de los Ejércitos</b>.
-					</p>
-					<br>
-					<center>
-						<div class="imgescudo">
-							<img src="imagenes/escudo.jpeg" alt="Escudo La Jardinera" title="Escudo La Jardinera">
-						</div>
-						<br>
-						<br>
-						<h2>
-							EL HIMNO
-						</h2>
-						<h3>
-							HIMNO A LA INSTITUCIÓN EDUCATIVA "INSTITUTO TERESIANO SEDE LA JARDINERA"
-						</h3>
-						<div class="intr-himno">
-							<p>
-								Prestigioso e inmortal Teresiano
-								templo augusto de ciencia y virtud
-								do se funden la fe, la esperanza y el amor a los pies de la cruz.
-						</div>
+				</div>
+
+				<h4 class="text-lg md:text-lg font-bold mb-6 text-center">ESTROFAS</h4>
+
+				<div class="space-y-8 text-center">
+					<!-- Estrofa I -->
+					<div>
+						<p class="leading-relaxed">
+							<span class="font-bold text-xl text-yellow-500">I.</span> A tu sombra de paz y ventura<br>
+							vi las horas felices correr<br>
+							y en mi pecho inocente derramas<br>
+							la simiente creadora del bien.
 						</p>
-						<div class="estrofas">
-							<h4>ESTROFAS</h4>
-						</div>
-						<div class="p-estrofas">
-							<ol type="I">
-								<li class="items-list">
-									<p>
-										A tu sombra de paz y ventura
-										vi las horas felices correr
-										y en mi pecho inocente derramas
-										la simiente creadora del bien.
-									</p>
-								</li>
-								<li>
-									<p>
-										Tú eres huerto sembrador de flores
-										que respira fragancia y amor
-										flores bellas que el vicio no empaña
-										ni emponzoña la hiel del baldón.
-									</p>
-								</li>
-								<li>
-									<p>
-										Tú me enseñas a amar a mis padres
-										la ley Santa de Dios a observar
-										a servir a mi patria querida con
-										denuedo, firmeza y lealtad.
-									</p>
-								</li>
-								<li>
-									<p>
-										Así crezco a tu sombra cual crecen
-										las palmeras de talle gentil
-										y a lo lejos vestido de flores
-										me sonríe un feliz porvenir.
-									</p>
-								</li>
-								<li>
-									<p>
-										Porvenir en tus claustros labrado
-										de pureza, de amor y verdad
-										contra el cual de furiosas pasiones
-										impotente será el huracán.
-									</p>
-								</li>
-								<li>
-									<p>
-										De gigante con paso asciende
-										a la cumbre de ciencia y virtud
-										Y do quiera los pechos inflama
-										Con rayos de fulgida luz.
-									</p>
-								</li>
-								<li>
-									<p>
-										Cuando suene el final de mi vida
-										y la tumba reclame mi ser
-										tu memoria tendré siempre fresca
-										cual las flores que adornen mi sien.
-									</p>
-								</li>
-								<li>
-									<p>
-										Entuasiasta tus glorias cantamos
-										en amor abrazados por ti
-										salve, salve colegio querido
-										crece y vive cual vives feliz.
-									</p>
-									<br>
-									<p class="p-reference">
-										<b>Letra:</b>
-										<br>
-										D.R.A.
-										<br>
-										<b>Música:</b>
-										<br>
-										AUTOR MAESTRO JUAN CARLOS ARÉVALO C.
-										<br>
-										<b>Adaptación:</b>
-										<br>
-										Esp. Lucy Sánchez
-									</p>
-								</li>
-							</ol>
-						</div>
-					</center>
+					</div>
+					<!-- Estrofa II -->
+					<div>
+						<p class="leading-relaxed">
+							<span class="font-bold text-xl text-yellow-500">II.</span> Tú eres huerto sembrador de
+							flores<br>
+							que respira fragancia y amor<br>
+							flores bellas que el vicio no empaña<br>
+							ni emponzoña la hiel del baldón.
+						</p>
+					</div>
+					<!-- Estrofa III -->
+					<div>
+						<p class="leading-relaxed">
+							<span class="font-bold text-xl text-yellow-500">III.</span> Tú me enseñas a amar a mis
+							padres<br>
+							la ley Santa de Dios a observar<br>
+							a servir a mi patria querida con<br>
+							denuedo, firmeza y lealtad.
+						</p>
+					</div>
+					<!-- Estrofa IV -->
+					<div>
+						<p class="leading-relaxed">
+							<span class="font-bold text-xl text-yellow-500">IV.</span> Así crezco a tu sombra cual
+							crecen<br>
+							las palmeras de talle gentil<br>
+							y a lo lejos vestido de flores<br>
+							me sonríe un feliz porvenir.
+						</p>
+					</div>
+					<!-- Estrofa V -->
+					<div>
+						<p class="leading-relaxed">
+							<span class="font-bold text-xl text-yellow-500">V.</span> Porvenir en tus claustros
+							labrado<br>
+							de pureza, de amor y verdad<br>
+							contra el cual de furiosas pasiones<br>
+							impotente será el huracán.
+						</p>
+					</div>
+					<!-- Estrofa VI -->
+					<div>
+						<p class="leading-relaxed">
+							<span class="font-bold text-xl text-yellow-500">VI.</span> De gigante con paso asciende<br>
+							a la cumbre de ciencia y virtud<br>
+							Y do quiera los pechos inflama<br>
+							Con rayos de fulgida luz.
+						</p>
+					</div>
+					<!-- Estrofa VII -->
+					<div>
+						<p class="leading-relaxed">
+							<span class="font-bold text-xl text-yellow-500">VII.</span> Cuando suene el final de mi
+							vida<br>
+							y la tumba reclame mi ser<br>
+							tu memoria tendré siempre fresca<br>
+							cual las flores que adornen mi sien.
+						</p>
+					</div>
+					<!-- Estrofa VIII -->
+					<div>
+						<p class="leading-relaxed">
+							<span class="font-bold text-xl text-yellow-500">VIII.</span> Entusiasta tus glorias
+							cantamos<br>
+							en amor abrazados por ti<br>
+							salve, salve colegio querido<br>
+							crece y vive cual vives feliz.
+						</p>
+					</div>
+				</div>
+
+				<div class="text-center mt-8 p-5 bg-gray-100 rounded-lg border-l-4 border-gray-400">
+					<p class="text-xs">
+						<strong>Letra:</strong> D.R.A.<br>
+						<strong>Música:</strong> AUTOR MAESTRO JUAN CARLOS ARÉVALO C.<br>
+						<strong>Adaptación:</strong> Esp. Lucy Sánchez
+					</p>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<footer class="relative">
+		<!-- Onda decorativa en la parte superior del footer -->
+		<div class="footer-wave">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+				preserveAspectRatio="none">
+				<path
+					d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					class="shape-fill" fill="#1f2937"></path>
+			</svg>
+		</div>
+
+		<div class="container mx-auto px-4 pt-16 pb-8 lg:col-span-1">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+				<!-- Información de contacto -->
+				<div class="mt-2 footer-element scroll-effect">
+					<h3 class="text-xl font-bold mb-7 relative inline-block">
+						<span class="relative z-10">Contáctanos</span>
+						<span
+							class="absolute bottom-0 left-0 w-full h-2 bg-[#1F2937] opacity-80 transform -rotate-2 -z-1"></span>
+					</h3>
+					<div class="space-y-4">
+						<a href="tel:+573177870358"
+							class="flex items-center space-x-3 group hover:text-gray-800 transition-colors duration-300 mb-2">
+							<div
+								class="bg-[#1F2937] hover:bg-blue-400 p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
+								<i class="fas fa-phone text-white text-lg"></i>
+							</div>
+							<span class="group-hover:text-[#3F4753]">Celular o WhatsApp</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Redes Sociales -->
+				<div class="mt-2 footer-element scroll-effect">
+					<h3 class="text-xl font-bold mb-7 relative inline-block">
+						<span class="relative z-10">Síguenos</span>
+						<span
+							class="absolute bottom-0 left-0 w-full h-2 bg-[#1F2937] opacity-80 transform -rotate-2 -z-1"></span>
+					</h3>
+					<div class="space-y-4">
+						<a href="https://youtu.be/Fxo72EOoRzM?feature=shared"
+							class="flex items-center space-x-3 group hover:text-gray-800 transition-colors duration-300 mb-2">
+							<div
+								class="bg-[#1F2937] hover:bg-red-700 p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
+								<i class="fab fa-youtube text-white text-xl"></i>
+							</div>
+							<span class="text-[#190404] group-hover:text-[#3F4753]">Youtube</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Ubicación -->
+				<div class="mt-2 footer-element scroll-effect">
+					<h3 class="text-xl font-bold mb-7 relative inline-block">
+						<span class="relative z-10">Ubicación</span>
+						<span
+							class="absolute bottom-0 left-0 w-full h-2 bg-[#1F2937] opacity-80 transform -rotate-2 -z-1"></span>
+					</h3>
+					<div class="flex items-start space-x-3">
+						<a href="https://maps.app.goo.gl/my6G7Ah2TWByJ4E3A" target="_blank" rel="noopener noreferrer"
+							class="flex items-center space-x-3 group">
+							<div
+								class="bg-[#1F2937] hover:bg-[#50C878] p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
+								<i class="fas fa-map-marker-alt text-white text-lg"></i>
+							</div>
+						</a>
+						<p class="text-[#190404]">
+							Instituto Teresiano Sede La Jardinera,<br>
+							Tuquerres, Nariño, Colombia
+						</p>
+					</div>
+
+					<!-- Mapa -->
+					<div class="mt-4 rounded-lg overflow-hidden shadow-lg">
+						<iframe src="https://www.google.com/maps?q=1.063787,-77.623453&hl=es&z=14&output=embed" width="100%"
+							height="250" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+
+			<!-- Separador -->
+			<div class="border-t border-gray-700 my-8"></div>
+
+			<!-- Información adicional y copyright -->
+			<div class="flex flex-col md:flex-row justify-between items-center">
+				<div class="p-2">
+					<p class="text-[#190404] text-xs">&copy; 2024 Centro Educativo La Jardinera. Todos los derechos
+						reservados.
+					</p>
 				</div>
 			</div>
 		</div>
-		<footer>
-			<div class="footer-container">
-				<div class="footer-section">
-					<h3>Contáctanos</h3>
-					<a href="tel:+573177870358" class="phone-icon">
-						<i class="fas fa-phone"></i> +57 317 7870358
-					</a>
-				</div>
-				<div class="footer-section">
-					<h3>Siguenos en Youtube</h3>
-					<div class="social-icons"><a href="https://youtube.com/@elizabethbap?si=9S9iOcDtMemxWj1Z"
-							class="social-icon"><i class="fab fa-youtube"></i></a>
-					</div>
-				</div>
-				<div class="footer-section">
-					<h3>Ubicación</h3>
-					<p>Instituto Teresiano Sede La Jardinera, Tuquerres, Nariño</p>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<p>&copy; 2024 Centro Educativo La Jardinera. Todos los derechos reservados.</p>
-			</div>
-		</footer>
-		<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-	</body>
-	
-	</html>
+	</footer>
+
+	<script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+	<script src="animacionImagenes.js"></script>
+</body>
+
+</html>
