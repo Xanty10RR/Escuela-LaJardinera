@@ -35,7 +35,7 @@ You can see the site in action here:
 
 * **Daniel Santiago Rosero** - Xanty10RR  
 
-## Contact me
+## 📧 Contact me
 
 - 👨🏻‍💻 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daniel-santiago-rosero-4420a91b0/)  
 
