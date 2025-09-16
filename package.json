@@ -13,7 +13,7 @@
     "flowbite": "^3.1.2"
   },
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
   },
   "repository": {
     "type": "git",
